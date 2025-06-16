@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Travel Passport</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="passport-container" id="passportContainer">
+        <div class="passport-header">
+            <h1>Your Time Travel Passport</h1>
+        </div>
+
+        <div class="passport-details">
+            <p>Traveler: <input type="text" id="travelerNameInput" placeholder="Enter your name"></p>
+            <p>Name on Passport: <span id="passportNameDisplay"></span></p>
+            <p>Destination: <span id="destinationDisplay">Not Set</span></p>
+        </div>
+
+        <div class="era-selection">
+            <label for="eraDropdown">Select a Specific Era:</label>
+            <select id="eraDropdown">
+                <option value="">-- Select --</option>
+            </select>
+        </div>
+
+        <div class="era-display">
+            <img id="eraImage" src="images/placeholder.jpg" alt="Era Image">
+            <p id="eraQuote">Select an era to see more.</p>
+        </div>
+
+        <div class="passport-actions">
+            <button id="surpriseMeButton">Surprise Me!</button>
+            <button id="changeDestinationButton">Change Destination</button>
+        </div>
+    </div>
+
+    <script src="passport.js"></script>
+</body>
+</html>

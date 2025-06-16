@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Travel Passport - Choose Destination</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Where do you want to go?</h1>
+        
+        <div class="choices">
+            <button id="pastButton" class="time-button" data-destination="Past">Past</button>
+            <button id="futureButton" class="time-button" data-destination="Future">Future</button>
+        </div>
+
+        <div class="preview-container">
+            <img id="previewImage" src="images/placeholder.jpg" alt="Time Period Preview">
+            <p id="previewText">Hover over a destination or click to select.</p>
+        </div>
+
+        <p id="statusText"></p>
+        <div id="loadingAnimation" class="loader" style="display: none;"></div>
+    </div>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
