@@ -42,4 +42,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     addDestinationEvents(pastButton, 'Past', imagePaths.pastPreview);
     addDestinationEvents(futureButton, 'Future', imagePaths.futurePreview);
+
+    const toggleInfoButton = document.getElementById('toggleInfoButton')
+    const infoParagraph = document.getElementById('infoParagraph')
+
+    toggleInfoButton.addEventListener('click', () => {
+        const isVisible = infoParagraph.style.display === 'block'
+        infoParagraph.style.display = isVisible ? 'none' : 'block'
+        toggleInfoButton.textContent = isVisible ? 'Show more info' : 'Hide info'
+    })
 });

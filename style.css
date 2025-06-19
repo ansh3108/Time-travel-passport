@@ -269,3 +269,37 @@ body.future-theme .passport-actions button#changeDestinationButton:hover {
 .passport-glow {
     box-shadow: 0 0 15px 5px #ffd700;
 }
+
+#toggleInfoButton {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #7c3aed; 
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+
+}
+
+#toggleInfoButton:hover {
+  background-color: #9f7aea; 
+  transform: scale(1.05);
+}
+
+
+#infoParagraph {
+  max-width: 600px;
+  margin: 10px auto;
+  padding: 15px;
+  background-color: #2d2d4d;
+  color: #f0f0f0;
+  border-radius: 10px;
+  font-size: 1rem;
+  line-height: 1.5;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.5s ease-in-out;
+}
+
