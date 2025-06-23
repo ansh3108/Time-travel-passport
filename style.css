@@ -303,3 +303,25 @@ body.future-theme .passport-actions button#changeDestinationButton:hover {
   transition: opacity 0.5s ease-in-out;
 }
 
+#factButton {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 15px;
+    font-size: 1rem;
+    background-color: #1f2937;
+    color: #f0f0f0;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s, ease;
+
+}
+
+#factButton:hover {
+    margin: 10px auto;
+    max-width: 600px;
+    text-align: center;
+    color: #d1d5db;
+    font-style: italic;
+    font-size: 1rem;
+}

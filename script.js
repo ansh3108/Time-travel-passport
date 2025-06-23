@@ -1,3 +1,17 @@
+function showRandomTravelFact() {
+    const facts = [
+        "The concept of time travel was popularized by H.G. Wells in 1895.",
+        "Albert Einstein’s theory of relativity makes time dilation possible.",
+        "The DeLorean from *Back to the Future* needed 1.21 gigawatts to jump time.",
+        "In the future, quantum computers might simulate entire realities.",
+        "The oldest known calendar is over 10,000 years old!"
+    ];
+
+    const randomIndex = Math.floor(Math.random() * facts.length);
+    const factDisplay = document.getElementById('factDisplay');
+    factDisplay.textContent = facts[randomIndex];
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     const pastButton = document.getElementById('pastButton');
     const futureButton = document.getElementById('futureButton');
@@ -5,6 +19,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const previewText = document.getElementById('previewText');
     const statusText = document.getElementById('statusText');
     const loadingAnimation = document.getElementById('loadingAnimation');
+
+    const toggleInfoButton = document.getElementById('toggleInfoButton');
+    const infoParagraph = document.getElementById('infoParagraph');
+
+    const factButton = document.getElementById('factButton');
+    factButton.addEventListener('click', showRandomTravelFact);
 
     const imagePaths = {
         placeholder: 'images/placeholder.jpg',
@@ -27,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
             window.location.href = 'passport.html';
         }, 2000);
     }
-
+    
 
     function addDestinationEvents(button, destination, previewImgSrc) {
         button.addEventListener('mouseover', () => {
@@ -35,20 +55,15 @@ document.addEventListener('DOMContentLoaded', () => {
             previewText.textContent = `Explore the ${destination}!`;
         });
 
-
         button.addEventListener('click', () => handleTimeButtonClick(destination, previewImgSrc));
     }
-    
 
     addDestinationEvents(pastButton, 'Past', imagePaths.pastPreview);
     addDestinationEvents(futureButton, 'Future', imagePaths.futurePreview);
 
-    const toggleInfoButton = document.getElementById('toggleInfoButton')
-    const infoParagraph = document.getElementById('infoParagraph')
-
     toggleInfoButton.addEventListener('click', () => {
-        const isVisible = infoParagraph.style.display === 'block'
-        infoParagraph.style.display = isVisible ? 'none' : 'block'
-        toggleInfoButton.textContent = isVisible ? 'Show more info' : 'Hide info'
-    })
+        const isVisible = infoParagraph.style.display === 'block';
+        infoParagraph.style.display = isVisible ? 'none' : 'block';
+        toggleInfoButton.textContent = isVisible ? 'Show more info' : 'Hide info';
+    });
 });
